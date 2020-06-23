@@ -1,5 +1,4 @@
-import { EVENT_TYPE, KEY_TYPE } from "./utils/constants.js";
-import makeTodoItemTemplate from "./utils/templates.js";
+import { KEY_TYPE } from "./utils/constants.js";
 import TodoItem from "./domain/TodoItem.js";
 import { TodoItemFilter } from "./TodoItemFilter.js";
 import { TodoListTypeButton } from "./TodoListTypeButton.js";
@@ -128,20 +127,5 @@ function TodoApp() {
     todoListTypeButton.focusOnShowCompletedButton();
   }
 };
-
-class Count {
-
-  constructor() {
-    const $todoCountValue = document.getElementById("todo-count-value");
-
-    this.setState = todoCount => {
-      this.render(todoCount);
-    }
-
-    this.render = todoCount => {
-      $todoCountValue.innerHTML = todoCount;
-    }
-  }
-}
 
 new TodoApp();

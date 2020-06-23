@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>뷰 기초 익히기</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  헬로 월드
+  <div id="app">
+    {{name}}
+  </div>
+  <script>
+    new Vue({    // vue 에서 제공하는 function 을 이용해서 vue 인스턴스를 생성한다.
+      el : "#app",    // 이 부분 덕분에 id가 "app"인 태그 안에서 vue 코드를 작성할 수 있게된다.
+      data : {
+        name : "히히예림"
+      }
+    });  
+  </script>
+</body>
+</html>
