@@ -7,15 +7,29 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-  헬로 월드
   <div id="app">
-    {{name}}
+    {{nextYear("안녕하세요!")}}
   </div>
   <script>
     new Vue({    // vue 에서 제공하는 function 을 이용해서 vue 인스턴스를 생성한다.
-      el : "#app",    // 이 부분 덕분에 id가 "app"인 태그 안에서 vue 코드를 작성할 수 있게된다.
-      data : {
-        name : "히히예림"
+      el: "#app",    // 이 부분 덕분에 id가 "app"인 태그 안에서 vue 코드를 작성할 수 있게된다.
+      data: {
+        person: {
+          name: "히히예림",
+          age: 23
+        }
+      },
+      methods: {
+        /*
+        nextYear: function (greeting) {
+          // vue.js 가 알아서
+          // this 에 data 를 넣기 때문에, this.data.person 이 아닌 this.person 으로 접근한다.
+          return greeting + " " + this.person.name + "은 내년에 " + (this.person.age + 1) + "세가 됩니다.";
+        }
+        */
+        nextYear(greeting) {  // 주석처리해논 코드랑 같은 코드임
+          return greeting + " " + this.person.name + "은 내년에 " + (this.person.age + 1) + "세가 됩니다.";
+        }
       }
     });  
   </script>
